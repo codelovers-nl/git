@@ -12,11 +12,27 @@ export class Git {
         }
     }
 
-    checkout(url: string) {
+    clone(url: string) {
+
     }
 
-    branch(name: string) {
+    checkout(branch: string): boolean {
+        return this.execute(
+            [
+                'checkout',
+                branch
+            ]
+        ).status === 0
+    }
 
+    createBranch(name: string) {
+        return this.execute(
+            [
+                'checkout',
+                '-b',
+                name
+            ]
+        ).status === 0
     }
 
     commit(message?: string): boolean {
@@ -30,16 +46,32 @@ export class Git {
         ).status === 0;
     }
 
-    push() {
-
+    push(remoteName: string): boolean {
+        return this.execute(
+            [
+                'push',
+                '-u',
+                'origin',
+                remoteName
+            ]
+        ).status === 0
     }
 
     pull() {
-
+        return this.execute(
+            [
+                'pull'
+            ]
+        )
     }
 
     add(value: string) {
-
+        return this.execute(
+            [
+                'add',
+                value
+            ]
+        ).status === 0
     }
 
     remove(value: string) {
