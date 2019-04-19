@@ -1,6 +1,6 @@
 {
   "name": "@codelovers-nl/git",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "Git client",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -21,9 +21,7 @@
   "scripts": {
     "test": "jest",
     "build": "tsc",
-    "postbuild": "copyfiles package.json dist",
-    "publish": "npm publish dist --access public",
-    "prepublishOnly": "npm run build"
+    "postbuild": "copyfiles package.json dist"
   },
   "dependencies": {
   },

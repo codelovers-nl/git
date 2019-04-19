@@ -12,8 +12,13 @@ export class Git {
         }
     }
 
-    clone(url: string) {
-
+    clone(url: string): boolean {
+        return this.execute(
+            [
+                'clone',
+                url
+            ]
+        ).status === 0
     }
 
     checkout(branch: string): boolean {
@@ -65,7 +70,7 @@ export class Git {
         )
     }
 
-    add(value: string) {
+    add(value: string): boolean {
         return this.execute(
             [
                 'add',
@@ -74,8 +79,14 @@ export class Git {
         ).status === 0
     }
 
-    remove(value: string) {
-
+    remove(value: string): boolean {
+        return this.execute(
+            [
+                'rm',
+                '-rf',
+                value
+            ]
+        ).status === 0
     }
 
     private execute(args: string[], printStderr = true): SpawnSyncReturns<string> {
@@ -93,4 +104,5 @@ export class Git {
             }
         )
     }
+
 }
