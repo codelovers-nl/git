@@ -1,0 +1,24 @@
+{
+  "name": "@codelovers/git",
+  "version": "0.0.1",
+  "description": "Git Client",
+  "main": "dist/index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/codelovers-nl/git.git"
+  },
+  "keywords": [
+    "Git",
+    "client",
+    "NodeJS"
+  ],
+  "author": "Pascal Wilbrink <info@codelovers.nl>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/codelovers-nl/git/issues"
+  },
+  "homepage": "https://github.com/codelovers-nl/git#readme"
+}
