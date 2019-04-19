@@ -21,7 +21,7 @@
   "scripts": {
     "test": "jest",
     "build": "tsc",
-    "postbuild": "copyfiles package.json dist",
+    "postbuild": "copyfiles package.json README.md CHANGELOG.md dist",
     "publish": "npm publish dist --access public",
     "prepublishOnly": "npm run build"
   },
